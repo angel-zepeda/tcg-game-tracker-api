@@ -4,7 +4,7 @@ import morgan from 'morgan'
 export const logger = createLogger({
   format: format.combine(
     format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
-    format.printf(info => `${info.timestamp} ${info.message}`),
+    format.printf((info: any) => `${info.timestamp} ${info.message}`),
   ),
 
   transports: [

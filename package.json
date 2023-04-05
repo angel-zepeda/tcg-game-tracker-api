@@ -6,7 +6,8 @@
   "scripts": {
     "lintfix": "eslint src --fix --cache",
     "dev": "tsnd --respawn --clear --files --rs src/server.ts",
-    "test": "jest --config jest.config.js"
+    "test": "jest --config jest.config.js",
+    "build": "tsc"
   },
   "jest": {
     "verbose": true
