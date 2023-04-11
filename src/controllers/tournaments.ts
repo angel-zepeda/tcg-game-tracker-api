@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import { Tournament } from '../models'
+import { Tournament, tournamentPayloadValidation } from '../models'
 
 class TournamentController {
   allTournaments(_: Request, res: Response) {
@@ -14,6 +14,15 @@ class TournamentController {
     try {
       const { body, user } = req
       const { deck, date, name, official, tcg } = body
+
+      tournamentPayloadValidation({
+        deck,
+        date,
+        name,
+        official,
+        tcg,
+        userId: user.id,
+      })
 
       const newTournament = await new Tournament({
         deck,

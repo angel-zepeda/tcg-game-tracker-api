@@ -1,3 +1,4 @@
+import { z } from 'zod'
 import { Schema, Types, model } from 'mongoose'
 
 import { ITournamentModel } from '../types'
@@ -14,3 +15,16 @@ const tournamentSchema = new Schema({
 })
 
 export const Tournament = model<ITournamentModel>('Tournament', tournamentSchema)
+
+const schema = z.object({
+  deck: z.string().min(3),
+  date: z.string(),
+  name: z.string().min(5),
+  official: z.boolean(),
+  userId: z.string(),
+  tcg: z.string(),
+})
+
+export const tournamentPayloadValidation = (body: any) => {
+  return schema.parse(body)
+}

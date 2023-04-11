@@ -23,7 +23,8 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "skipLibCheck": true,
-    "typeRoots": ["./node_modules/@types", "./index.d.ts", "./express.d.ts"]
+    "typeRoots": ["./node_modules/@types", "./index.d.ts", "./express.d.ts"],
+    "strict": true
   },
   "exclude": ["node_modules/*", "build", "logs/*"],
   "include": ["src/**/*", "index.d.ts", "express.d.ts"]
