@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/angel-zepeda/tcg-tournament-tracker-api/compare/v1.0.0...v1.1.0) (2023-04-11)
+
+
+### Features
+
+* add zod for schema validations ([b59d708](https://github.com/angel-zepeda/tcg-tournament-tracker-api/commit/b59d708be4bca8373489520e5927852474885eb9))
+
 # 1.0.0 (2023-04-05)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "express-api-starter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Express Api starter",
   "packageManager": "pnpm@7.26.3",
   "scripts": {
